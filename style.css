@@ -5,6 +5,7 @@ body{
 }
 
 .gamewindow{
+    position: relative;
     float: left; 
     background-color: #000;
     width: 100%;
@@ -38,6 +39,7 @@ body{
     bottom: 10px;
     left: 240px;
     text-align: center;
+    z-index: 1;
 }
 
 .dogset1{
@@ -60,17 +62,48 @@ body{
 }
 .dogset3{
     position: absolute;
-    width: 40px;
+    width: 500px;
     height: 440px;
     background-color: red;
     top:80px;
     right:0px;
 }
-.dog1, .dog2, .dog3, .dog4{
+.dog1{
     position: absolute;
     width: 40px;
     height: 50px;
+    right: 0px;
     background-color: blue;
-    text-align: center;
-   
+    z-index: 1; 
+}
+
+.leftbanner, .rightbanner, .topbanner, .bottombanner{
+    display: none;
+    z-index: 10;
+}
+
+.leftbanner{
+    position: absolute;
+
+}
+
+.rightbanner{
+    position: absolute;
+    right: 0px;
+}
+
+.topbanner{
+    position: absolute;
+    left: 100px;
+    top: 0px;
+}
+
+.bottombanner{
+    position: absolute;
+    left: 100px;
+    bottom: 0px;
+}
+
+#counter{
+    width: 50px;
 }

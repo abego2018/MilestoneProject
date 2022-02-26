@@ -10,34 +10,44 @@
 </head>
 <body>
     <div class="gamewindow">
+        <div class="leftbanner">
+            <img src="assets/bannerLeft.png">
+        </div>
+        <div class="rightbanner">
+            <img src="assets/bannerRight.png">
+        </div>
+        <div class="topbanner">
+            <img src="assets/bannerTop.png">
+        </div>
+        <div class="bottombanner">
+            <img src="assets/bannerBottom.png">
+        </div>
+        
+       
         <div class="gamescreen">
-            <div class="leftbanner"></div>
-            <div class="rightbanner"></div>
-            <div class="topbanner"></div>
+           
+
+
             <dogs class="dogset1">
                 <dog class="dog1">DOG1</dog>
-                <dog class="dog2">DOG2</dog>
-                <dog class="dog3">DOG3</dog>
-                <dog class="dog4">DOG4</dog>
             </dogs>
             <dogs class="dogset2">
                 <dog class="dog1">DOG1</dog>
-                <dog class="dog2">DOG2</dog>
-                <dog class="dog3">DOG3</dog>
-                <dog class="dog4">DOG4</dog>
             </dogs>
             <dogs class="dogset3">
-                <dog class="dog1">DOG1</dog>
-                <dog class="dog2">DOG2</dog>
-                <dog class="dog3">DOG3</dog>
-                <dog class="dog4">DOG4</dog>
+                <dog class="dog1" id="doggo">DOG1</dog>
             </dogs>
             <div class="gamearea">
             
                 <playarea>
-                    <player class="cat">PLAYER</player>
+                    <input type="text" id="counter" value = 0>
+                    <player class="cat" id="catt">PLAYER</player>
                 </playarea>
             </div>
+        </div>
+        <div class="lowerdisplay">
+            <input type="button" value="Start Game" onClick="runGame('1')"/>
+            <input type="button" value="Stop" onClick="runGame('2')"/>
         </div>
     </div>
 </body>
