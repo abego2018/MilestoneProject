@@ -13,16 +13,20 @@ body{
 }
 
 .gamescreen{
+    position: relative;
     background-color: bisque;
     width: 580px;
     height:600px;
+    left:60px;
 }
 .gamearea{
     position: relative;
     float:left;
     background-color: green;
-    width:580px;
-    height:600px;
+    width:500px;
+    height:500px;
+    top:50px;
+    left:40px;
     
 }
 
@@ -38,15 +42,35 @@ body{
 
 .dogset1{
     position: absolute;
-    width: 500px;
+    width: 420px;
     height: 50px;
     background-color: red;
+    left:80px;
+   
 }
 
+.dogset2{
+    position: absolute;
+    width: 40px;
+    height: 440px;
+    background-color: red;
+    top:80px;
+    left:0px;
+   
+}
+.dogset3{
+    position: absolute;
+    width: 40px;
+    height: 440px;
+    background-color: red;
+    top:80px;
+    right:0px;
+}
 .dog1, .dog2, .dog3, .dog4{
     position: absolute;
     width: 40px;
     height: 50px;
     background-color: blue;
     text-align: center;
+   
 }
