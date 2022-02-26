@@ -1,0 +1,52 @@
+body{
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+}
+
+.gamewindow{
+    float: left; 
+    background-color: #000;
+    width: 100%;
+    height: 600px;
+    width:700px;
+}
+
+.gamescreen{
+    background-color: bisque;
+    width: 580px;
+    height:600px;
+}
+.gamearea{
+    position: relative;
+    float:left;
+    background-color: green;
+    width:580px;
+    height:600px;
+    
+}
+
+.cat{
+    position: absolute;
+    width: 40px;
+    height: 50px;
+    background-color: orange;
+    bottom: 10px;
+    left: 240px;
+    text-align: center;
+}
+
+.dogset1{
+    position: absolute;
+    width: 500px;
+    height: 50px;
+    background-color: red;
+}
+
+.dog1, .dog2, .dog3, .dog4{
+    position: absolute;
+    width: 40px;
+    height: 50px;
+    background-color: blue;
+    text-align: center;
+}
