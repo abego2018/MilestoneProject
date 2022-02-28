@@ -23,8 +23,7 @@ function newNonPlayableCharacter(x, y) {
     }
 
 
-
-    let element = newImage(randomDog())
+    let element = newImage(randomDog(), 'dog')
     element.style.zIndex = 1;
     
     let direction = null;
@@ -50,35 +49,31 @@ function newNonPlayableCharacter(x, y) {
 
     async function walkEast(time) {
         direction = 'east'
-        element.src = `./assets/red-character/east.gif`
+        element.src = `randomDog()`
         await sleep(time)
         stop(); 
     }
 
     async function walkNorth(time) {
         direction = 'north'
-        element.src = `./assets/red-character/north.gif`
         await sleep(time)
         stop(); 
     }
 
     async function walkWest(time) {
         direction = 'west'
-        element.src = `./assets/red-character/west.gif`
         await sleep(time)
         stop(); 
     }
 
     async function walkSouth(time) {
         direction = 'south'
-        element.src = `./assets/red-character/south.gif`
         await sleep(time)
         stop(); 
     }
 
     function stop() {
         direction = null
-        element.src = `./assets/red-character/static.gif`
     }
 
     return {

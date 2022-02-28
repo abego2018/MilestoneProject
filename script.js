@@ -38,8 +38,9 @@ function runGame(state){
 
 
 
-function newImage(url){
+function newImage(url, classname){
     let image = document.createElement('img')
+    image.classList.add(classname)
     image.src = url
     image.style.position = 'absolute'
     document.body.append(image)
@@ -50,7 +51,7 @@ function newImage(url){
 const playerCat = newPlayableCharacter(380, 320)
 const npc = newNonPlayableCharacter(645, randGenDogY())
 
-//Generate dogs in random position on y-axis
+//Generate dogs in random position on y-axis 645
 function randGenDogY(){
     let randYpos = Math.floor(Math.random() * (380)) + 320;
     return randYpos
@@ -59,13 +60,11 @@ function randGenDogY(){
 let dogInterval;
 
 
+let xPos = window.scrollX + document.querySelector('.dog').getBoundingClientRect().left;
+console.log(xPos)
 
-function moveDogs(npc){
-for(let i=0; i<100; i++){
-    let xPos = 645;
-    npc.style.right = xPos - 10;
+let doggo = document.getElementsByClassName("dog");
 
-}
 
-}
-dogInterval = setInterval('', 100);
+npc.walkWest(2300)
+
