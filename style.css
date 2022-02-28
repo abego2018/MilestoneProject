@@ -23,7 +23,7 @@ body{
 .gamearea{
     position: relative;
     float:left;
-    background-color: green;
+    background-color: white;
     width:500px;
     height:500px;
     top:50px;
@@ -78,7 +78,7 @@ body{
 }
 
 .leftbanner, .rightbanner, .topbanner, .bottombanner{
-    display: none;
+   display: none;
     z-index: 10;
 }
 

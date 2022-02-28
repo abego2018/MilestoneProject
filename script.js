@@ -1,9 +1,12 @@
+
+
 let counter = 0;
 
 function count(){
     counter++;
     document.getElementById('counter').value = counter;
-    moveDogsLeft(); //move dog tot the left
+    
+    
 }
 
 let countInterval;
@@ -29,26 +32,40 @@ function runGame(state){
     }
 }
 
-function moveDogsLeft(){
 
-    let getDogX = document.getElementById('doggo').offsetLeft;
-      
-    if(getDogX > 0){
-
-        getDogX = getDogX-40;
-    console.log(getDogX)
-
-    }
+// move function from WEB GAME PT 7
 
 
 
-//     if(getDogX <= 0){
 
-//         document.getElementById('doggo').style.left = null ;
-//         document.getElementById('doggo').style.right = '0px';
-//     }
-//     else{
-//         getDogX = getDogX-40;
-//         document.getElementById('doggo').style.left = getDogX;
-//     }
+function newImage(url){
+    let image = document.createElement('img')
+    image.src = url
+    image.style.position = 'absolute'
+    document.body.append(image)
+    return image
 }
+
+
+const playerCat = newPlayableCharacter(380, 320)
+const npc = newNonPlayableCharacter(645, randGenDogY())
+
+//Generate dogs in random position on y-axis
+function randGenDogY(){
+    let randYpos = Math.floor(Math.random() * (380)) + 320;
+    return randYpos
+}
+
+let dogInterval;
+
+
+
+function moveDogs(npc){
+for(let i=0; i<100; i++){
+    let xPos = 645;
+    npc.style.right = xPos - 10;
+
+}
+
+}
+dogInterval = setInterval('', 100);
