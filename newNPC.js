@@ -74,6 +74,7 @@ function newNonPlayableCharacter(x, y) {
 
     function stop() {
         direction = null
+        element.parentNode.removeChild(element);
     }
 
     return {
