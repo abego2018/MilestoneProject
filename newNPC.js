@@ -1,29 +1,86 @@
-function newNonPlayableCharacter(x, y) {
+function newNonPlayableCharacter(x, y, startpoint) {
 
-    //Generate a random dog
+
+     //direction pass in parameter along with newNonPlayable Character
+    
+    //array to hold image selections
+    let dogImages = [
+        'assets/dogOne/dogOneLeft.gif', 
+        'assets/dogOne/dogOneRight.gif', 
+        'assets/dogOne/dogOneDown.gif',
+        'assets/dogTwo/dogTwoLeft.gif', 
+        'assets/dogTwo/dogTwoRight.gif', 
+        'assets/dogTwo/dogTwoDown.gif',
+        'assets/dogThree/dogThreeLeft.gif',
+        'assets/dogThree/dogThreeRight.gif',
+        'assets/dogThree/dogThreeDown.gif',
+        'assets/dogFour/dogFourLeft.gif',
+        'assets/dogFour/dogFourRight.gif',
+        'assets/dogFour/dogFourDown.gif'
+    ]
+     //Generate a random dog
     let srcImage =  '';
-
-    function randomDog(){
-
+    
+    function randomDog(startpoint){
+            console.log(startpoint);
             let randomNum = Math.random();
-            if (randomNum >= 0 && randomNum < .25){
-                srcImage = 'assets/dogOne/dogOneLeft.gif'
+
+            if(startpoint == 'right'){
+                if (randomNum >= 0 && randomNum < .25){
+                    srcImage = dogImages[0]
+                }
+                else if(randomNum >= .25 && randomNum < .50){
+                    srcImage = dogImages[3]
+                }
+                else if(randomNum >= .50 && randomNum < .75){
+                    srcImage = dogImages[6]
+                }
+                else{
+                    srcImage = dogImages[9]
+                }
+                
+                return srcImage
             }
-            else if(randomNum >= .25 && randomNum < .50){
-                srcImage = 'assets/dogTwo/dogTwoLeft.gif'
-            }
-            else if(randomNum >= .50 && randomNum < .75){
-                srcImage = 'assets/dogThree/dogThreeLeft.gif'
+            else if(startpoint == 'left'){
+
+                console.log(startpoint)
+                if (randomNum >= 0 && randomNum < .25){
+                    srcImage = dogImages[1]
+                }
+                else if(randomNum >= .25 && randomNum < .50){
+                    srcImage = dogImages[4]
+                }
+                else if(randomNum >= .50 && randomNum < .75){
+                    srcImage = dogImages[7]
+                }
+                else{
+                    srcImage = dogImages[10]
+                }
+                
+                return srcImage
             }
             else{
-                srcImage = 'assets/dogFour/dogFourLeft.gif'
+                if (randomNum >= 0 && randomNum < .25){
+                    srcImage = dogImages[2]
+                }
+                else if(randomNum >= .25 && randomNum < .50){
+                    srcImage = dogImages[5]
+                }
+                else if(randomNum >= .50 && randomNum < .75){
+                    srcImage = dogImages[8]
+                }
+                else{
+                    srcImage = dogImages[11]
+                }
+                
+                return srcImage
             }
-            
-            return srcImage
+
+
     }
 
 
-    let element = newImage(randomDog(), 'dog')
+    let element = newImage(randomDog(startpoint), 'dog')
     element.style.zIndex = 1;
     
     let direction = null;
@@ -49,25 +106,28 @@ function newNonPlayableCharacter(x, y) {
 
     async function walkEast(time) {
         direction = 'east'
-        element.src = `randomDog()`
+        //element.src = `randomDog()`
         await sleep(time)
         stop(); 
     }
 
     async function walkNorth(time) {
         direction = 'north'
+        //element.src = `randomDog()`
         await sleep(time)
         stop(); 
     }
 
     async function walkWest(time) {
         direction = 'west'
+        //element.src = `randomDog()`
         await sleep(time)
         stop(); 
     }
 
     async function walkSouth(time) {
         direction = 'south'
+        //element.src = `randomDog()`
         await sleep(time)
         stop(); 
     }

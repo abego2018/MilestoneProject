@@ -79,7 +79,7 @@ body{
 }
 
 .leftbanner, .rightbanner, .topbanner, .bottombanner{
-   display: none;
+  
     z-index: 10;
 }
 

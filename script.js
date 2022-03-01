@@ -1,36 +1,5 @@
 
 
-let counter = 0;
-
-function count(){
-    counter++;
-    document.getElementById('counter').value = counter;
-    
-    
-}
-
-let countInterval;
-
-function runGame(state){
-    if (state == 1)//run game
-    {
-        if(counter > 100)
-        {
-            runGame('2')
-        }
-        else{
-            countInterval = setInterval("count();", 100); 
-        }
-    }
-    else{
-
-        //stop game
-        clearInterval(countInterval);
-        counter = 0;
-        document.getElementById('counter').value = counter;
-
-    }
-}
 
 
 
@@ -44,7 +13,7 @@ function newImage(url, classname){
 }
 
 
-const playerCat = newPlayableCharacter(370, 320)
+const playerCat = newPlayableCharacter(370,250)
 
 
 
@@ -60,19 +29,52 @@ function randGenDogX(){
 }
 
 
-// for (let i = 0; i < 3; i++)
-// {
-//     npc = newNonPlayableCharacter(645, randGenDogY())
-//     npc.walkWest(2300)
 
-// }
 
 let npcCount = 0; 
 function gameLoop(){
-    setTimeout(function(){console.log('hello'); 
-    npcCount++;
-    npc = newNonPlayableCharacter(645, randGenDogY())
+
+    // let counter = 0;
+
+    // function count(){
+    //     counter++;
+    //     document.getElementById('counter').value = counter;   
+    // }
+    
+    // let countInterval;
+    
+    // function runGame(state){
+    //     if (state == 1)//run game
+    //     {
+    //         if(counter > 100)
+    //         {
+    //             runGame('2')
+    //         }
+    //         else{
+    //             countInterval = setInterval("count();", 100); 
+    //         }
+    //     }
+    //     else{
+    
+    //         //stop game
+    //         clearInterval(countInterval);
+    //         counter = 0;
+    //         document.getElementById('counter').value = counter;
+    
+    //     }
+    // }
+    
+
+
+
+    setTimeout(function(){
+    npcCount++;    
+    npc = newNonPlayableCharacter(645, randGenDogY(), 'right')
     npc.walkWest(2300)
+    npc1 = newNonPlayableCharacter(randGenDogX(), 800, 'top')
+    npc1.walkSouth(2100)
+    npc2 = newNonPlayableCharacter(100, randGenDogY(), 'left')
+    npc2.walkEast(2300)
         if (npcCount < 15) {
             gameLoop();
         }
@@ -80,7 +82,7 @@ function gameLoop(){
 
 }
 
-gameLoop();
+//gameLoop();
 
 
 
