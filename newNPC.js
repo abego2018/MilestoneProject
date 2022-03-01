@@ -22,7 +22,7 @@ function newNonPlayableCharacter(x, y, startpoint) {
     let srcImage =  '';
     
     function randomDog(startpoint){
-            console.log(startpoint);
+            
             let randomNum = Math.random();
 
             if(startpoint == 'right'){
@@ -43,7 +43,6 @@ function newNonPlayableCharacter(x, y, startpoint) {
             }
             else if(startpoint == 'left'){
 
-                console.log(startpoint)
                 if (randomNum >= 0 && randomNum < .25){
                     srcImage = dogImages[1]
                 }
@@ -79,8 +78,11 @@ function newNonPlayableCharacter(x, y, startpoint) {
 
     }
 
-
+ 
     let element = newImage(randomDog(startpoint), 'dog')
+    element.addEventListener('click', () =>{
+        element.remove()
+    })
     element.style.zIndex = 1;
     
     let direction = null;
@@ -102,39 +104,37 @@ function newNonPlayableCharacter(x, y, startpoint) {
         element.style.bottom = y + 'px'
     }
 
-    setInterval(moveCharacter, 1)
+    setInterval(moveCharacter, 6)
 
     async function walkEast(time) {
         direction = 'east'
-        //element.src = `randomDog()`
         await sleep(time)
         stop(); 
     }
 
     async function walkNorth(time) {
         direction = 'north'
-        //element.src = `randomDog()`
         await sleep(time)
         stop(); 
     }
 
     async function walkWest(time) {
         direction = 'west'
-        //element.src = `randomDog()`
         await sleep(time)
         stop(); 
     }
 
     async function walkSouth(time) {
         direction = 'south'
-        //element.src = `randomDog()`
         await sleep(time)
         stop(); 
     }
 
     function stop() {
         direction = null
-        element.parentNode.removeChild(element);
+        if(element !== null){
+        element.remove()
+        }
     }
 
     return {
@@ -143,7 +143,7 @@ function newNonPlayableCharacter(x, y, startpoint) {
         walkNorth: walkNorth,
         walkEast: walkEast,
         walkSouth: walkSouth,
-        stop: stop
+        stop: stop,
     }
 
     function sleep(time){

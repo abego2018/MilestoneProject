@@ -13,7 +13,7 @@ function newImage(url, classname){
 }
 
 
-const playerCat = newPlayableCharacter(370,250)
+//const playerCat = newPlayableCharacter(370,250)
 
 
 
@@ -63,27 +63,31 @@ function gameLoop(){
     
     //     }
     // }
-    
+
 
 
 
     setTimeout(function(){
     npcCount++;    
     npc = newNonPlayableCharacter(645, randGenDogY(), 'right')
-    npc.walkWest(2300)
+    npc.walkWest(3400) ///originally 2300
+// for different modes, pass time interval to newNPC function and adjust  element.walkDirection(time) accordingly.
+// interval at 10  then walkdirection(5500) for side to side  
+
+
     npc1 = newNonPlayableCharacter(randGenDogX(), 800, 'top')
-    npc1.walkSouth(2100)
+    npc1.walkSouth(3200)
     npc2 = newNonPlayableCharacter(100, randGenDogY(), 'left')
-    npc2.walkEast(2300)
+    npc2.walkEast(3400)
         if (npcCount < 15) {
             gameLoop();
         }
     }, 1500)
 
+    
 }
 
-//gameLoop();
-
+gameLoop();
 
 
 

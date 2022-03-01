@@ -102,7 +102,7 @@ body{
 .bottombanner{
     position: absolute;
     left: 100px;
-    bottom: 0px;
+    bottom: -4px;
 }
 
 #counter{
