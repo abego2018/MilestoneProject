@@ -30,60 +30,53 @@ function randGenDogX(){
 
 
 
+let npcCount = 0;
+let npcCount1 = 0;
+let npcCount2 = 0 ;  
+let gameCounter = 0;
 
-let npcCount = 0; 
+
 function gameLoop(){
-
-    // let counter = 0;
-
-    // function count(){
-    //     counter++;
-    //     document.getElementById('counter').value = counter;   
-    // }
-    
-    // let countInterval;
-    
-    // function runGame(state){
-    //     if (state == 1)//run game
-    //     {
-    //         if(counter > 100)
-    //         {
-    //             runGame('2')
-    //         }
-    //         else{
-    //             countInterval = setInterval("count();", 100); 
-    //         }
-    //     }
-    //     else{
-    
-    //         //stop game
-    //         clearInterval(countInterval);
-    //         counter = 0;
-    //         document.getElementById('counter').value = counter;
-    
-    //     }
-    // }
-
-
-
+    let score = 0; 
 
     setTimeout(function(){
-    npcCount++;    
-    npc = newNonPlayableCharacter(645, randGenDogY(), 'right')
-    npc.walkWest(3400) ///originally 2300
-// for different modes, pass time interval to newNPC function and adjust  element.walkDirection(time) accordingly.
-// interval at 10  then walkdirection(5500) for side to side  
+
+    npc = newDog(645, randGenDogY(), 'right')
+    npc.walkWest(4400) ///originally 2300
+    // npcCount = npc.element
+    // npcCount.addEventListener('click', () => {
+    //     npcCount.remove()
+    //     score++;
+    // })
 
 
-    npc1 = newNonPlayableCharacter(randGenDogX(), 800, 'top')
-    npc1.walkSouth(3200)
-    npc2 = newNonPlayableCharacter(100, randGenDogY(), 'left')
-    npc2.walkEast(3400)
-        if (npcCount < 15) {
+    npc1 = newDog(randGenDogX(), 800, 'top')
+    npc1.walkSouth(4200)
+    // npcCount1 = npc1.element
+    // npcCount1.addEventListener('click', () => {
+    //     npcCount1.remove()
+    //     score++;
+    // })
+    
+    npc2 = newDog(100, randGenDogY(), 'left')
+    npc2.walkEast(4400)
+    // npcCount2 = npc2.element
+    // npcCount2.addEventListener('click', () => {
+    //     npcCount2.remove()
+    //     score++;
+    // })
+
+        if (gameCounter < 15) {
             gameLoop();
         }
     }, 1500)
 
+  
+   // let updateScore = newNonPlayableCharacter().score
+    //console.log(updateScore)
+
+/
+    console.log(score)
     
 }
 

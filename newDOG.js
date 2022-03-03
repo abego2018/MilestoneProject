@@ -1,4 +1,4 @@
-function newNonPlayableCharacter(x, y, startpoint) {
+function newDog(x, y, startpoint) {
 
 
      //direction pass in parameter along with newNonPlayable Character
@@ -78,11 +78,16 @@ function newNonPlayableCharacter(x, y, startpoint) {
 
     }
 
- 
+    let score = 0;
+   
+
     let element = newImage(randomDog(startpoint), 'dog')
-    element.addEventListener('click', () =>{
+    element.addEventListener('click', function scorekeeper(score){
         element.remove()
+        score++;
+        return score
     })
+    
     element.style.zIndex = 1;
     
     let direction = null;
@@ -104,7 +109,7 @@ function newNonPlayableCharacter(x, y, startpoint) {
         element.style.bottom = y + 'px'
     }
 
-    setInterval(moveCharacter, 6)
+    setInterval(moveCharacter, 8)
 
     async function walkEast(time) {
         direction = 'east'
@@ -144,6 +149,7 @@ function newNonPlayableCharacter(x, y, startpoint) {
         walkEast: walkEast,
         walkSouth: walkSouth,
         stop: stop,
+        score: score
     }
 
     function sleep(time){
