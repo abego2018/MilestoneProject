@@ -1,4 +1,4 @@
-function newDog(x, y, startpoint) {
+function newDog(x, y, startpoint, score) {
 
 
      //direction pass in parameter along with newNonPlayable Character
@@ -78,18 +78,16 @@ function newDog(x, y, startpoint) {
 
     }
 
-    let score = 0;
    
-
-    let element = newImage(randomDog(startpoint), 'dog')
-    element.addEventListener('click', function scorekeeper(score){
-        element.remove()
-        score++;
-        return score
+   
+    let element = newImage(randomDog(startpoint))
+    element.addEventListener('click', () => {
+        element.remove() 
+        scoreKeeper()
     })
-    
     element.style.zIndex = 1;
-    
+
+
     let direction = null;
 
     function moveCharacter() {
@@ -149,7 +147,7 @@ function newDog(x, y, startpoint) {
         walkEast: walkEast,
         walkSouth: walkSouth,
         stop: stop,
-        score: score
+        //score: score
     }
 
     function sleep(time){
@@ -157,5 +155,6 @@ function newDog(x, y, startpoint) {
             setTimeout(resolve, time)
         })
     }
+    
 }
 

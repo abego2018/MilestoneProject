@@ -79,7 +79,7 @@ body{
 }
 
 .leftbanner, .rightbanner, .topbanner, .bottombanner{
-  display: none;
+ display:none;
     z-index: 10;
 }
 
@@ -107,4 +107,9 @@ body{
 
 #counter{
     width: 50px;
+}
+
+h3{
+    color: red;
+    margin-left: 20px;
 }
