@@ -6,9 +6,10 @@ Title "Who let the dogs out?".
 
 Controls: Click on the asset to make it disappear.
 
+### Current BUGS
+Score is not currently updating correctly. It does not keep up with the total. 
 
-
-### Requirements
+#### Requirements
 Requirements
 
 General Requirements

@@ -96,9 +96,9 @@ function gameLoop(){
 }
 
 
-
+function startGame(){
 gameLoop();
-setTimeout(function(){finalScore()}, 33000);
+setTimeout(function(){finalScore()}, 34000);
 setTimeout(function(){hiddenMessage()}, 35000);
-
+}
 
