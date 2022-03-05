@@ -31,26 +31,31 @@
 
 
             <dogs class="dogset1">
-                <dog class="dog1">DOG1</dog>
+                <dog class="dog1"></dog>
             </dogs>
             <dogs class="dogset2">
-                <dog class="dog1">DOG1</dog>
+                <dog class="dog1"></dog>
             </dogs>
             <dogs class="dogset3">
-                <dog class="dog1" id="doggo">DOG1</dog>
+                <dog class="dog1" id="doggo"></dog>
             </dogs>
             <div class="gamearea">
             
                 <playarea>
-                    <!--<input type="text" id="score" value = 0>-->
                     <h3>Score:<span id="score">0</span></h3>
                 </playarea>
+                
+                <div class="final" id="final" style="display:none;">
+                    <h1 class="rank" id="rank">Rank:<span class="rankId" id="rankId"></span></h1>
+                    <span></span>
+                    <h2 class="message" id="message"></h2>
+
+                </div>
             </div>
         </div>
-       <!--- <div class="lowerdisplay">
-            <input type="button" value="Start Game" onClick="gameLoop()"/>
-            <input type="button" value="Stop" onClick="runGame('2')"/>
-        </div>-->
+        <div class="lowerdisplay">
+            <input type="button" value="Start Game" onClick="startGame()"/>
+        </div>
     </div>
 </body>
 </html>

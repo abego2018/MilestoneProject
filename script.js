@@ -1,18 +1,51 @@
-//const playerCat = newPlayableCharacter(370,250)
-
-// let npcCount = 0;
-// let npcCount1 = 0;
-// let npcCount2 = 0 ;  
-let gameCounter = 0;
+ let gameCounter = 0;
 let userScore = 0;
-
+let rank = '';
 function scoreKeeper(){
 
     userScore++;
     console.log(userScore)
+    return userScore
+    
+    
 }
-const points = document.getElementById('#score')
-points.textContent = userScore;
+
+ function hiddenMessage(){
+    let hiddenDiv = document.getElementById('final');
+    if ( hiddenDiv.style.display === "none"){
+        hiddenDiv.style.display = "block";
+    }
+    else{
+        hiddenDiv.style.display = "none";
+    }
+}
+
+
+
+function finalScore(){
+
+    let finalScore = scoreKeeper();
+console.log("your final score is " + finalScore)
+
+    if (finalScore  <= 14){
+        rank = 'Rookie';
+    }
+    else if(finalScore <= 21){
+        rank = 'Veteran';
+    }
+    else if(finalScore <= 27){
+        rank = 'Expert'
+    }
+    else{
+        rank = 'Master'
+    }
+    const finalMessage = document.getElementById('message');
+    finalMessage.textContent = "You caught " + finalScore + " dogs" ;
+
+    const finalRank = document.getElementById('rankId');
+    finalRank.textContent = " " + rank; 
+
+}
 
 //Generate dogs in random position on y-axis 645
 function randGenDogY(){
@@ -25,8 +58,9 @@ function randGenDogX(){
     return randXpos
 }
 
+
 function gameLoop(){
-    let scoredPoints = 0; 
+  
     gameCounter++;
 
     
@@ -35,30 +69,36 @@ function gameLoop(){
     npc = newDog(645, randGenDogY(), 'right', scoreKeeper)
     npc.walkWest(4400) 
   
+    npc1 = newDog(randGenDogX(), 800, 'top', scoreKeeper)
+    npc1.walkSouth(4050)
    
-    const points = document.querySelector('#score')
-    points.textContent = scoredPoints;
+    npc2 = newDog(100, randGenDogY(), 'left', scoreKeeper)
+    npc2.walkEast(4300)
 
-    //npc1 = newDog(randGenDogX(), 800, 'top')
-    //npc1.walkSouth(4200)
+    npc3 = newDog(randGenDogX(), 320, 'bottom', scoreKeeper)
+    npc3.walkNorth(4050)
+
+    const points = document.getElementById('score')
+    points.textContent = userScore;
+
+        if (gameCounter < 15) {
+            gameLoop();
+           
+        
+        }
+    }, 2000)
+
+  
    
     
-    //npc2 = newDog(100, randGenDogY(), 'left')
-    //npc2.walkEast(4400)
-  
-
-        if (gameCounter < 10) {
-            gameLoop();
-            
-        }
-    }, 1500)
-
-  
-
-  
-
-    //console.log(score)
+    // console.log(score)
     
 }
 
+
+
 gameLoop();
+setTimeout(function(){finalScore()}, 33000);
+setTimeout(function(){hiddenMessage()}, 35000);
+
+

@@ -5,6 +5,7 @@ body{
 }
 
 .gamewindow{
+ 
     position: relative;
     float: left; 
     background-color: #000;
@@ -14,6 +15,7 @@ body{
 }
 
 .gamescreen{
+
     position: relative;
     background-color: bisque;
     width: 580px;
@@ -21,6 +23,7 @@ body{
     left:60px;
 }
 .gamearea{
+    overflow:hidden;
     position: relative;
     float:left;
     background-color: white;
@@ -31,55 +34,8 @@ body{
     
 }
 
-.cat{
-    position: absolute;
-    width: 40px;
-    height: 50px;
-    background-color: orange;
-    bottom: 10px;
-    left: 240px;
-    text-align: center;
-    z-index: 1;
-}
-
-.dogset1{
-    position: absolute;
-    width: 420px;
-    height: 50px;
-    background-color: red;
-    left:80px;
-   
-}
-
-.dogset2{
-    position: absolute;
-    width: 40px;
-    height: 440px;
-    background-color: red;
-    top:80px;
-    left:0px;
-   
-}
-.dogset3{
-    position: absolute;
-    width: 500px;
-    height: 440px;
-    background-color: red;
-    top:80px;
-    right:0px;
-}
-.dog1{
-    display: none;
-    position: absolute;
-    width: 40px;
-    height: 50px;
-    right: 0px;
-    background-color: blue;
-    z-index: 1; 
-}
-
 .leftbanner, .rightbanner, .topbanner, .bottombanner{
- display:none;
+  
     z-index: 10;
 }
 
@@ -113,3 +69,19 @@ h3{
     color: red;
     margin-left: 20px;
 }
+
+#final{
+    text-align: center;
+    text-shadow: 4px 4px 2px black;
+    position: relative;
+    float:left;
+    height: 250px;
+    width: 300px;
+    /*background-color: rgb(65, 116, 255);*/
+    left: 100px;
+    top: 50px;
+    color: rgb(255, 255, 255);
+    border-radius: 40px;
+    background-image: url('assets/finalScreen.png');
+}
+

@@ -8,15 +8,19 @@ function newDog(x, y, startpoint, score) {
         'assets/dogOne/dogOneLeft.gif', 
         'assets/dogOne/dogOneRight.gif', 
         'assets/dogOne/dogOneDown.gif',
+        'assets/dogOne/dogOneUp.gif',
         'assets/dogTwo/dogTwoLeft.gif', 
         'assets/dogTwo/dogTwoRight.gif', 
         'assets/dogTwo/dogTwoDown.gif',
+        'assets/dogTwo/dogTwoUp.gif',
         'assets/dogThree/dogThreeLeft.gif',
         'assets/dogThree/dogThreeRight.gif',
         'assets/dogThree/dogThreeDown.gif',
+        'assets/dogThree/dogThreeUp.gif',
         'assets/dogFour/dogFourLeft.gif',
         'assets/dogFour/dogFourRight.gif',
-        'assets/dogFour/dogFourDown.gif'
+        'assets/dogFour/dogFourDown.gif',
+        'assets/dogFour/dogFourUp.gif'
     ]
      //Generate a random dog
     let srcImage =  '';
@@ -30,13 +34,13 @@ function newDog(x, y, startpoint, score) {
                     srcImage = dogImages[0]
                 }
                 else if(randomNum >= .25 && randomNum < .50){
-                    srcImage = dogImages[3]
+                    srcImage = dogImages[4]
                 }
                 else if(randomNum >= .50 && randomNum < .75){
-                    srcImage = dogImages[6]
+                    srcImage = dogImages[8]
                 }
                 else{
-                    srcImage = dogImages[9]
+                    srcImage = dogImages[12]
                 }
                 
                 return srcImage
@@ -47,29 +51,45 @@ function newDog(x, y, startpoint, score) {
                     srcImage = dogImages[1]
                 }
                 else if(randomNum >= .25 && randomNum < .50){
-                    srcImage = dogImages[4]
+                    srcImage = dogImages[5]
                 }
                 else if(randomNum >= .50 && randomNum < .75){
-                    srcImage = dogImages[7]
+                    srcImage = dogImages[9]
                 }
                 else{
+                    srcImage = dogImages[13]
+                }
+                
+                return srcImage
+            }
+            else if(startpoint == 'top'){
+                if (randomNum >= 0 && randomNum < .25){
+                    srcImage = dogImages[2]
+                }
+                else if(randomNum >= .25 && randomNum < .50){
+                    srcImage = dogImages[6]
+                }
+                else if(randomNum >= .50 && randomNum < .75){
                     srcImage = dogImages[10]
+                }
+                else{
+                    srcImage = dogImages[14]
                 }
                 
                 return srcImage
             }
             else{
                 if (randomNum >= 0 && randomNum < .25){
-                    srcImage = dogImages[2]
+                    srcImage = dogImages[3]
                 }
                 else if(randomNum >= .25 && randomNum < .50){
-                    srcImage = dogImages[5]
+                    srcImage = dogImages[7]
                 }
                 else if(randomNum >= .50 && randomNum < .75){
-                    srcImage = dogImages[8]
+                    srcImage = dogImages[11]
                 }
                 else{
-                    srcImage = dogImages[11]
+                    srcImage = dogImages[15]
                 }
                 
                 return srcImage
@@ -91,6 +111,7 @@ function newDog(x, y, startpoint, score) {
     let direction = null;
 
     function moveCharacter() {
+
         if (direction === 'west') {
             x -= 1
         }
@@ -147,7 +168,7 @@ function newDog(x, y, startpoint, score) {
         walkEast: walkEast,
         walkSouth: walkSouth,
         stop: stop,
-        //score: score
+    
     }
 
     function sleep(time){
