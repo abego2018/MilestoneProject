@@ -69,13 +69,13 @@ function gameLoop(){
     npc = newDog(645, randGenDogY(), 'right', scoreKeeper)
     npc.walkWest(4400) 
   
-    npc1 = newDog(randGenDogX(), 600, 'top', scoreKeeper)
+    npc1 = newDog(randGenDogX(), 700, 'top', scoreKeeper)
     npc1.walkSouth(4050)
    
     npc2 = newDog(100, randGenDogY(), 'left', scoreKeeper)
     npc2.walkEast(4300)
 
-    npc3 = newDog(randGenDogX(), 230, 'bottom', scoreKeeper)
+    npc3 = newDog(randGenDogX(), 200, 'bottom', scoreKeeper)
     npc3.walkNorth(4050)
 
     const points = document.getElementById('score')
