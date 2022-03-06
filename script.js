@@ -94,11 +94,27 @@ function gameLoop(){
     // console.log(score)
     
 }
-
-
-function startGame(){
-gameLoop();
-setTimeout(function(){finalScore()}, 34000);
-setTimeout(function(){hiddenMessage()}, 35000);
+function audioLoop(){
+    var audio = new Audio("assets/thirtySecSoundBite.mp3")
+    audio.play();
 }
 
+function startGame(){
+    setTimeout(function(){audioLoop()},2000);
+    gameLoop();
+    setTimeout(function(){finalScore()}, 33000);
+    setTimeout(function(){hiddenMessage()}, 34000);
+    }
+
+
+
+
+function loadGame(){
+
+document.getElementById("start").disabled = true; //deactivating the button to only load once
+
+startGame();    //starting the game
+
+document.getElementById("start").disabled = false;// reactivating the button to work after a reset
+
+}

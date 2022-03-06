@@ -7,7 +7,13 @@ Title "Who let the dogs out?".
 Controls: Click on the asset to make it disappear.
 
 ### Current BUGS
-Score is not currently updating correctly. It does not keep up with the total. 
+Score is not currently updating correctly. It does not keep up with the total. Although, the final score pop-up does show the correct amount. 
+
+Once I opened it through github pages, the assets are not loading in the correct positions but are still clickable and function properly.
+
+Start button needs to be fixed. To limit only a single click to start to prevent overloading. 
+
+
 
 #### Requirements
 Requirements
