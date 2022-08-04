@@ -1,10 +1,20 @@
-# MilestoneProject
+# TITLE: Who Let The Dogs Out? (webgame)
 
+# MilestoneProject [CSULB - FULL-STACK BOOTCAMP]
+# Description
+This Javascript application is based on old arcade style games. With a graphics/title marquee. Simple gameplay. Click start and then click on the dog image to remove the dog and add to your score. The score is totalled and presented to the player at the end of the round.
+
+The dogs load from behind the margquee divs and cross the screen from four differections. The round lasts about 40 seconds. The game can be reset
+# DEMO
+The game is being hosted through github. To demo the game, go to:
+https://abego2018.github.io/MilestoneProject/
+
+Gameplay screenshot:
 ## Game Idea
 A game where the user controls a character to avoid obstacles on a 2-d plane. Influence in design by arcade games with simple controls and scoring. 
 Title "Who let the dogs out?". 
 
-Controls: Click on the asset to make it disappear.
+Controls: Click on the dog to make it disappear.
 
 ### Current BUGS
 Score is not currently updating correctly. It does not keep up with the total. Although, the final score pop-up does show the correct amount. 

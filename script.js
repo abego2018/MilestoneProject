@@ -1,4 +1,4 @@
- let gameCounter = 0;
+let gameCounter = 0;
 let userScore = 0;
 let rank = '';
 function scoreKeeper(){
