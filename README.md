@@ -1,22 +1,25 @@
 # TITLE: Who Let The Dogs Out? (webgame)
 
 # MilestoneProject [CSULB - FULL-STACK BOOTCAMP]
-# Description
+# DESCRIPTION
 This Javascript application is based on old arcade style games. With a graphics/title marquee. Simple gameplay. Click start and then click on the dog image to remove the dog and add to your score. The score is totalled and presented to the player at the end of the round.
 
 The dogs load from behind the margquee divs and cross the screen from four differections. The round lasts about 40 seconds. The game can be reset
 # DEMO
 The game is being hosted through github. To demo the game, go to:
-https://abego2018.github.io/MilestoneProject/
+
+![alt text](https://abego2018.github.io/MilestoneProject/)
 
 Gameplay screenshot:
-## Game Idea
-A game where the user controls a character to avoid obstacles on a 2-d plane. Influence in design by arcade games with simple controls and scoring. 
-Title "Who let the dogs out?". 
 
-Controls: Click on the dog to make it disappear.
+![alt text](https://github.com/abego2018/MilestoneProject/blob/main/assets/gameplay_screenshot.png?raw=true)
 
-### Current BUGS
+
+End-game screenshot:
+
+![alt text](https://github.com/abego2018/MilestoneProject/blob/main/assets/end_game_screenshot.png?raw=true)
+
+# ISSUES
 Score is not currently updating correctly. It does not keep up with the total. Although, the final score pop-up does show the correct amount. 
 
 Once I opened it through github pages, the assets are not loading in the correct positions but are still clickable and function properly.
@@ -24,6 +27,11 @@ Once I opened it through github pages, the assets are not loading in the correct
 Start button needs to be fixed. To limit only a single click to start to prevent overloading. 
 
 
+### Game Idea
+A game where the user controls a character to avoid obstacles on a 2-d plane. Influence in design by arcade games with simple controls and scoring. 
+Title "Who let the dogs out?". 
+
+Controls: Click on the dog to make it disappear.
 
 #### Requirements
 Requirements
