@@ -1,0 +1,21 @@
+-  added changelog.md pending update
+- updating README and adding screenshots
+- added credit for audio
+- working on Start button issue. backgroung music working correctly
+- updated starting points again to load properly
+- updated starting points for top and bottom assets
+- added the background image and updated the dog gifs
+- added final screen image with score and rank.
+- cleaned up files and got the scoreKeeper function to work
+- started cleaning up the code
+- added event listener to remove asset when clicked
+- got assets to generate properly
+- added gameloop function to generate assets in random positions
+- got npc to move as needed
+- added separate JS files and assets to load
+- added counter
+- styled game area, and placeholders for player and obstacles
+- updated html classes, styled elements with css
+- created html elements
+- created html, css and js files
+- Initial commit
